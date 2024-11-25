@@ -1,0 +1,10 @@
+-- Stored Procedure
+CREATE PROCEDURE small_prices
+    @Unique_ID_param FLOAT
+AS
+BEGIN
+    SELECT *
+    FROM [PortfolioProyect].[dbo].[NashvilleHousing]
+    WHERE SalesPrice <= 150000
+    AND UniqueID = @Unique_ID_param;
+END
